@@ -1,16 +1,22 @@
-import React, { Component } from 'react';
-import './App.css';
+import React,{useState,useEffect} from 'react'
+import axios from "axios"
 
-export default class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-  render() {
-    return (
-      <div>
-        <h1>HELLO WORLD</h1>
-      </div>
-    );
-  }
+export default function App() {
+ const [book, setBook] = useState({
+   title: "",
+   author:"",
+   pages:"",
+   publisher: "",
+   published_at:"",
+ });
+
+ axios
+ .get("http://localhost:3000/books");
+
+ })
+  return (
+    <div>
+      
+    </div>
+  )
 }
