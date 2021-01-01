@@ -14,7 +14,7 @@ Q3) What are the main three sections of a JWT?
 Payloads, Option, SECRETE
 
 Q4) Name three types of express middle-wares.
-
+get, delete, update
 
 Q5) What is the `effect` hook used for in react?
 to render the page when the user enter the page.
