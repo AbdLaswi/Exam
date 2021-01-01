@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import GetBook from "./component/GetBook"
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 export default function App() {
-  const [book, setBook] = useState({
-    title: "",
-    author: "",
-    pages: "",
-    publisher: "",
-    published_at: "",
-  });
 
-  axios.get("http://localhost:3000/books");
 
-  return <div></div>;
+  return (
+    <Route>
+      <Link to="/library">
+        <GetBook />
+      </Link>
+      <Link to="/library/create_book">
+        <GetBook />
+      </Link>
+    </Route>
+  );
 }
