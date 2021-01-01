@@ -9,23 +9,37 @@ return 'NO' if the parentheses in the input string are not balanced,.
 
 */
 
-console.log('PART 4');
+console.log("PART 4");
 
 const isABalancedString = (str) => {
   // WRITE YOUR CODE BELOW THIS LINE
-  str =str.split("")
-  for(let i =0; i < str.length; i++){
-    
+  let [
+    openSquareBracket,
+    closeSquareBracket,
+    openCurlyBracket,
+    closeCurlyBracket,
+    openParentheses,
+    closeParentheses,
+  ] = [0, 0, 0, 0, 0, 0];
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === "]") closeSquareBracket += 1;
+    else if (str[i] === "[") openSquareBracket += 1;
+    else if (str[i] === "(") openParentheses += 1;
+    else if (str[i] === ")") closeParentheses += 1;
+    else if (str[i] === "{") openCurlyBracket += 1;
+    else closeCurlyBracket += 1;
   }
-  
+  if (
+    openSquareBracket === closeSquareBracket &&
+    openParentheses === closeParentheses &&
+    openCurlyBracket === closeCurlyBracket
+  ) {
+    return "YES";
+  }
+  return "NO"
 };
 
 /*
-every bracket that we open should be closed to return YES otherwise it will show NO 
-so let's cut it to small pieces
-1- the code should check every single ele in the arr (for statement) 
-2- after that, the code must catch the open bracket and check if there any close bracket that's the same 
-3- i
 Examples:
 
 isABalancedString( '[]' )
