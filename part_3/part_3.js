@@ -30,8 +30,8 @@ updateOne to update the value in the schema
 deleteOne to delete the value from the schema
 
 Q9) What is the difference between authentication and authorization?
-
-
+authentication : to confirm who the user is 
+authentication : user's permission 
 Q10) Why do we save some information as an environment variable (in .env file)?
 to make our application more secure, if anyone can be allowed to have access in the database
 then users data will be public.
