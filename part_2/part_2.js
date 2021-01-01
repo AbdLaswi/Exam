@@ -8,7 +8,7 @@ Q1) What is the query for displaying all the databases?
 SHOW DATABASES
 
 Q2) What is the query for using a specific database?
-SELECT DATABASE
+USE DATABASE
 
 Q3) What is the query for creating a new database called `meraki`?
 CREATE DATABASE meraki 
@@ -32,7 +32,7 @@ Q9) What is the query to delete a user that has `info@meraki-academy.org` as an 
 DELETE FROM users WHERE email = `info@meraki-academy.org`
 
 Q10) What is the query to perform a left join on two tables (users, posts) depending on the user_id? (user_id is a FK in `posts` table)
-SELECT user_id, post_id from users WHERE users_user_id = post_post_id
+SELECT user_id, post_id from users INNER JOIN posts ON users_user_id = posts_user_id
 
 Q11) What is the query to get all the users that their age ranges from 20-30 from the `users` table?
 SELECT * FROM users WHERE age >20 AND age< 30
